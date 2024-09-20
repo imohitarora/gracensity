@@ -23,7 +23,7 @@ export default function DarkFreelancerPortfolio() {
 
   useEffect(() => {
     (async function () {
-      const cal = await getCalApi({ namespace: "15min" });
+      const cal = await getCalApi({ namespace: "30min" });
       cal("ui", { styles: { branding: { brandColor: "#000000" } }, hideEventTypeDetails: false, layout: "month_view" });
     })();
   }, []);
@@ -82,14 +82,6 @@ export default function DarkFreelancerPortfolio() {
               <a href="#portfolio" className="text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors">
                 Portfolio
               </a>
-              <Button
-                data-cal-namespace="15min"
-                data-cal-link="mohitarora/15min"
-                data-cal-config={`{"layout":"month_view","theme":"${theme}"}`}
-                className="rounded-md bg-purple-600 px-3.5 py-2 text-sm font-semibold text-white shadow-sm hover:bg-purple-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-purple-600 transition-colors"
-              >
-                Get in touch
-              </Button>
               <ThemeToggle theme={theme} toggleTheme={toggleTheme} />
             </div>
             <div className="flex md:hidden items-center space-x-4">
@@ -126,9 +118,6 @@ export default function DarkFreelancerPortfolio() {
                 <a href="#portfolio" className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 dark:text-white hover:bg-gray-50 dark:hover:bg-gray-800">
                   Portfolio
                 </a>
-                <a href="#contact" className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 dark:text-white hover:bg-gray-50 dark:hover:bg-gray-800">
-                  Contact
-                </a>
               </div>
             </div>
           </div>
@@ -144,12 +133,14 @@ export default function DarkFreelancerPortfolio() {
                 <h1 className="text-4xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-6xl">Gracensity: Freelance Web Developer & Designer</h1>
                 <p className="mt-6 text-lg leading-8 text-gray-600 dark:text-gray-300">Crafting beautiful, functional websites and applications. Let&apos;s bring your digital vision to life.</p>
                 <div className="mt-10 flex items-center justify-center gap-x-6">
-                  <a
-                    href="#contact"
-                    className="rounded-md bg-purple-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-purple-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-purple-600 transition-colors"
+                  <Button
+                    data-cal-namespace="30min"
+                    data-cal-link="mohitarora/30min"
+                    data-cal-config={`{"layout":"month_view","theme":"${theme}"}`}
+                    className="rounded-md bg-purple-600 px-3.5 py-2 text-sm font-semibold text-white shadow-sm hover:bg-purple-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-purple-600 transition-colors"
                   >
                     Get in touch
-                  </a>
+                  </Button>
                   <a href="#portfolio" className="text-sm font-semibold leading-6 text-purple-600 dark:text-purple-300 hover:text-purple-500 dark:hover:text-purple-200 transition-colors">
                     View my work <span aria-hidden="true">→</span>
                   </a>
