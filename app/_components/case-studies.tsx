@@ -4,7 +4,7 @@ import Image from "next/image";
 export function CaseStudies() {
   return (
     <FadeInWhenVisible>
-      <div id="case-studies" className="bg-gray-100 dark:bg-gray-800 py-24 sm:py-32">
+      <div id="case-studies" className="bg-white dark:bg-gray-900 py-24 sm:py-32">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-2xl lg:text-center">
             <h2 className="text-base font-semibold leading-7 text-purple-600 dark:text-purple-400">Case Studies</h2>
@@ -30,15 +30,20 @@ export function CaseStudies() {
                 description: "Successfully migrated a large financial institution's infrastructure to the cloud, enhancing security and reducing operational costs by 25%.",
                 image: "/case-study-3.jpg",
               },
+              {
+                title: "Healthcare Data Analytics",
+                description: "Implemented a data analytics solution for a healthcare provider, enabling real-time insights and improving patient outcomes by 20%.",
+                image: "/case-study-4.jpg",
+              }
             ].map((study) => (
               <article key={study.title} className="flex flex-col items-start justify-between">
                 <div className="relative w-full">
-                  <Image 
-                    src={study.image} 
-                    alt={study.title} 
+                  <Image
+                    src={study.image}
+                    alt={study.title}
                     width={800}
                     height={600}
-                    className="aspect-[16/9] w-full rounded-2xl bg-gray-100 object-cover sm:aspect-[2/1] lg:aspect-[3/2]" 
+                    className="aspect-[16/9] w-full rounded-2xl bg-gray-100 object-cover sm:aspect-[2/1] lg:aspect-[3/2]"
                   />
                   <div className="absolute inset-0 rounded-2xl ring-1 ring-inset ring-gray-900/10" />
                 </div>

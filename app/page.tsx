@@ -9,7 +9,7 @@ import { Services } from "./_components/services";
 import { WhyChooseUs } from "./_components/why-us";
 import { Testimonials } from "./_components/testimonials";
 import { CaseStudies } from "./_components/case-studies";
-import { ContactForm } from "./_components/contact-form";
+import { ContactForm } from "@/components/contact-form";
 import { CallToAction } from "./_components/call-to-action";
 import { Footer } from "./_components/footer";
 

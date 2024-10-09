@@ -1,4 +1,4 @@
-import { motion, useScroll } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
 import { Activity, Menu, Moon, Sun } from "lucide-react";
 
 interface ThemeToggleProps {
@@ -21,12 +21,13 @@ interface HeaderProps {
 export function Header({ theme, toggleTheme, setMobileMenuOpen }: HeaderProps) {
   const { scrollY } = useScroll();
 
+  const opacity = useTransform(scrollY, [0, 50], [1, 0.9]);
+  const backdropFilter = useTransform(scrollY, [0, 50], ["blur(0px)", "blur(8px)"]);
+  const borderBottom = useTransform(scrollY, [0, 50], ["none", "1px solid rgba(0, 0, 0, 0.1)"]);
+
   return (
     <motion.header
-      style={{
-        opacity: scrollY.get() > 50 ? 0.9 : 1,
-        backdropFilter: `blur(${scrollY.get() > 50 ? 8 : 0}px)`,
-      }}
+      style={{ opacity, backdropFilter, borderBottom }}
       className="sticky top-0 left-0 right-0 z-50 bg-white dark:bg-gray-900 transition-all duration-300"
     >
       <nav className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8" aria-label="Top">
