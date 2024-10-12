@@ -1,17 +1,16 @@
 "use client";
 
-import { useState, useEffect } from "react";
-import { getCalApi } from "@calcom/embed-react";
 import { Header } from "@/app/_components/header";
-import { MobileMenu } from "./_components/mobile-menu";
-import { Hero } from "./_components/hero";
-import { Services } from "./_components/services";
-import { WhyChooseUs } from "./_components/why-us";
-import { Testimonials } from "./_components/testimonials";
-import { CaseStudies } from "./_components/case-studies";
-import { ContactForm } from "@/components/contact-form";
+import { getCalApi } from "@calcom/embed-react";
+import { useEffect, useState } from "react";
 import { CallToAction } from "./_components/call-to-action";
+import { CaseStudies } from "./_components/case-studies";
 import { Footer } from "./_components/footer";
+import { Hero } from "./_components/hero";
+import { MobileMenu } from "./_components/mobile-menu";
+import { Services } from "./_components/services";
+import { Testimonials } from "./_components/testimonials";
+import { WhyChooseUs } from "./_components/why-us";
 
 export default function SoftwareServicesWebsite() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -47,7 +46,7 @@ export default function SoftwareServicesWebsite() {
         <WhyChooseUs />
         <Testimonials />
         <CaseStudies />
-        <ContactForm />
+        {/* <ContactForm /> */}
         <CallToAction />
       </main>
       <Footer />

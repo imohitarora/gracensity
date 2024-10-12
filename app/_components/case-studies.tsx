@@ -1,5 +1,4 @@
 import { FadeInWhenVisible } from "@/components/fade-in";
-import Image from "next/image";
 
 export function CaseStudies() {
   return (
@@ -38,12 +37,21 @@ export function CaseStudies() {
             ].map((study) => (
               <article key={study.title} className="flex flex-col items-start justify-between">
                 <div className="relative w-full">
-                  <Image
+                  {/* <Image
                     src={study.image}
                     alt={study.title}
                     width={800}
                     height={600}
                     className="aspect-[16/9] w-full rounded-2xl bg-gray-100 object-cover sm:aspect-[2/1] lg:aspect-[3/2]"
+                  /> */}
+                  <video
+                    src={"https://assets.aboutmohit.com/adorabelshop.mp4"}
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                    className="pointer-events-none mx-auto h-50 w-full object-cover object-top rounded-t-lg"
+                    style={{ borderTopLeftRadius: '0.5rem', borderTopRightRadius: '0.5rem' }}
                   />
                   <div className="absolute inset-0 rounded-2xl ring-1 ring-inset ring-gray-900/10" />
                 </div>

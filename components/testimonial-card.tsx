@@ -26,7 +26,7 @@ export function TestimonialCard({ name, role, image, quote }: TestimonialProps =
   return (
     <motion.div
       whileHover={{ scale: 1.03 }}
-      transition={{ type: "spring", stiffness: 300, damping: 10 }}
+      transition={{ type: "spring", stiffness: 300, damping: 10 }}    
     >
       <Card className="w-[350px] bg-gray-100 dark:bg-gray-800 shadow-lg border-gray-200 dark:border-gray-900">
         <CardHeader className="flex flex-row items-center gap-4 pb-2">
