@@ -11,7 +11,9 @@ export function MobileMenu({ mobileMenuOpen, setMobileMenuOpen }: MobileMenuProp
     <>
       {mobileMenuOpen && <div className="fixed inset-0 z-50 bg-gray-900 bg-opacity-95 backdrop-blur-sm" aria-hidden="true" />}
       <div className={`${mobileMenuOpen ? "block" : "hidden"} md:hidden`}>
-        <div className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white dark:bg-gray-900 px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+        <div className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] 
+                dark:bg-[#000000] dark:bg-[radial-gradient(#ffffff33_1px,#111827_1px)]
+                [background-size:16px_16px] px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
           <div className="flex items-center justify-between">
             <a href="#" className="-m-1.5 p-1.5">
               <span className="sr-only">Gracensity</span>

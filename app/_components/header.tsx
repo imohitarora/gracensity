@@ -1,6 +1,6 @@
+import { data } from "@/lib/data";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { Activity, Menu, Moon, Sun } from "lucide-react";
-import { data } from "@/lib/data";
 
 interface ThemeToggleProps {
   theme: string;
@@ -31,7 +31,7 @@ export function Header({ theme, toggleTheme, setMobileMenuOpen }: HeaderProps) {
   return (
     <motion.header
       style={{ opacity, backdropFilter, borderBottom }}
-      className="sticky top-0 left-0 right-0 z-50 bg-white dark:bg-gray-900 transition-all duration-300"
+      className="sticky top-0 left-0 right-0 z-50 transition-all duration-300"
     >
       <nav className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8" aria-label="Top">
         <div className="flex h-16 items-center justify-between">

@@ -6,7 +6,9 @@ export function CaseStudies() {
 
   return (
     <FadeInWhenVisible>
-      <div id="case-studies" className="bg-white dark:bg-gray-900 py-24 sm:py-32">
+      <div id="case-studies" className="bg-white bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] 
+                dark:bg-[#000000] dark:bg-[radial-gradient(#ffffff33_1px,#111827_1px)]
+                [background-size:16px_16px] py-24 sm:py-32">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-2xl lg:text-center">
             <h2 className="text-base font-semibold leading-7 text-purple-600 dark:text-purple-400">{data.caseStudiesSection.title}</h2>

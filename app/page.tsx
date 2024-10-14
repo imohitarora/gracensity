@@ -37,7 +37,9 @@ export default function SoftwareServicesWebsite() {
   };
 
   return (
-    <div className="min-h-screen bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 font-sans antialiased transition-colors duration-200">
+    <div className="min-h-screen bg-white bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] 
+                dark:bg-[#000000] dark:bg-[radial-gradient(#ffffff33_1px,#111827_1px)]
+                [background-size:16px_16px] text-gray-900 dark:text-gray-100 font-sans antialiased transition-colors duration-200">
       <Header theme={theme} toggleTheme={toggleTheme} setMobileMenuOpen={setMobileMenuOpen} />
       <MobileMenu mobileMenuOpen={mobileMenuOpen} setMobileMenuOpen={setMobileMenuOpen} />
       <main>
