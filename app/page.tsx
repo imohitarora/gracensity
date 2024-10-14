@@ -8,7 +8,7 @@ import { CaseStudies } from "./_components/case-studies";
 import { Footer } from "./_components/footer";
 import { Hero } from "./_components/hero";
 import { MobileMenu } from "./_components/mobile-menu";
-import { Services } from "./_components/services";
+import { Solutions } from "./_components/services";
 import { Testimonials } from "./_components/testimonials";
 import { WhyChooseUs } from "./_components/why-us";
 
@@ -42,11 +42,10 @@ export default function SoftwareServicesWebsite() {
       <MobileMenu mobileMenuOpen={mobileMenuOpen} setMobileMenuOpen={setMobileMenuOpen} />
       <main>
         <Hero theme={theme} />
-        <Services />
+        <Solutions />
         <WhyChooseUs />
         <Testimonials />
         <CaseStudies />
-        {/* <ContactForm /> */}
         <CallToAction />
       </main>
       <Footer />

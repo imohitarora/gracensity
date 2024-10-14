@@ -1,5 +1,6 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { Activity, Menu, Moon, Sun } from "lucide-react";
+import { data } from "@/lib/data";
 
 interface ThemeToggleProps {
   theme: string;
@@ -25,6 +26,8 @@ export function Header({ theme, toggleTheme, setMobileMenuOpen }: HeaderProps) {
   const backdropFilter = useTransform(scrollY, [0, 50], ["blur(0px)", "blur(8px)"]);
   const borderBottom = useTransform(scrollY, [0, 50], ["none", "1px solid rgba(0, 0, 0, 0.1)"]);
 
+  const { navigation } = data;
+
   return (
     <motion.header
       style={{ opacity, backdropFilter, borderBottom }}
@@ -39,12 +42,15 @@ export function Header({ theme, toggleTheme, setMobileMenuOpen }: HeaderProps) {
             </a>
           </div>
           <div className="hidden md:flex items-center space-x-8">
-            <a href="#services" className="text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors">
-              Services
-            </a>
-            <a href="#portfolio" className="text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors">
-              Portfolio
-            </a>
+            {navigation.map((item) => (
+              <a
+                key={item.name}
+                href={item.href}
+                className="text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors"
+              >
+                {item.name}
+              </a>
+            ))}
             <ThemeToggle theme={theme} toggleTheme={toggleTheme} />
           </div>
           <div className="flex md:hidden items-center space-x-4">
